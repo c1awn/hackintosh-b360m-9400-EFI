@@ -23,7 +23,8 @@
 | CPU  | i5 9400带核显  |
 |  主板 |B360m迫击炮   |
 | 显卡  | 蓝宝石Rx480  |
-| 显示器  | LG 4K Mac不上4K对不住眼睛 |
+| 显示器  | LG 4K Mac不上4K对不住眼睛 |  
+
 [主要参考refer](https://github.com/GeQ1an/MSI-B360M-MORTAR-HACKINTOSH-OPENCORE-EFI "refer")
 ### Main change：  
 - SMBIOS 必须自定义
