@@ -1,6 +1,6 @@
 # hackintosh-b360m-9400 自用EFI备份
 ```
-                                      chawn’s mac
+                                      mac
                                       ----------------------------------------------
                                       Model   : Hackintosh (SMBIOS: iMac19,1)
                  ###                  OS      : macOS Catalina 10.15.4 19E287
