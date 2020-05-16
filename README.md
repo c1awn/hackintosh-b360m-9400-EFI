@@ -30,7 +30,6 @@
 [主要参考refer](https://github.com/GeQ1an/MSI-B360M-MORTAR-HACKINTOSH-OPENCORE-EFI "refer")
 ### Main change：  
 - SMBIOS 必须自定义
-- 增加NUMefix.kext
 - 改USBinjectall为usbport，删除cpufriend，不需要hwp变频
 - 修改oc boot menu参数
 
@@ -42,7 +41,7 @@
 - FaceTime / iMessage
 - Apple Music / Apple TV Plus
 - 睿频 /原生电源管理
-- 睡眠 / 键盘、鼠标唤醒，但是睡眠后机箱的磁盘CPU、显卡风扇依旧转，可能不算真正成功睡眠，先这样
+- 睡眠 / 键盘、鼠标唤醒，但是睡眠后机箱的磁盘CPU、显卡风扇依旧转，可能不算真正成功睡眠。不过10.15.4在白果的睡眠也不好，有风扇狂转等问题。
 
 
 
