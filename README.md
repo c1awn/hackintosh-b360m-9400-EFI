@@ -39,7 +39,6 @@
 - WiFi（PCI-E 设备） / 蓝牙（PEI-E 载 USB 设备）
 - 隔空投送 / 接力 / 随航
 - FaceTime / iMessage
-- Apple Music / Apple TV Plus
 - 睿频 /原生电源管理
 - 睡眠 / 键盘、鼠标唤醒，但是睡眠后机箱的磁盘CPU、显卡风扇依旧转，可能不算真正成功睡眠。不过10.15.4在白果的睡眠也不好，有风扇狂转等问题。
 
