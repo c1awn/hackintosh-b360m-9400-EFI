@@ -32,7 +32,7 @@
 - SMBIOS 必须自定义
 - 改USBinjectall为usbport，删除cpufriend，不需要hwp变频
 - 修改oc boot menu参数
-
+- 测试Nvmefix.kext对温度的变化不明显，EFI里没加
 ### What's work
 - 声卡（板载）/ 网卡（板载）
 - 显卡 硬解 4K（HEVC + H.264） Videoproc显示UHD630硬解，而不是独显。通过观看4K视频、转码等发现主要是核显出力，CPU基本满载，独显很平淡。网上说核显作为主力对剪辑视频啥的速度有提升。
