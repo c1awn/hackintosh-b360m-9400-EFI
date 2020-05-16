@@ -26,8 +26,7 @@
 | 内存  | 枭鲸 16G x2 寨厂 貌似是玖和马甲 |
 | 显示器  | LG 4K Mac不上4K对不住眼睛 |    
 
-![](https://pic1awn.oss-cn-shanghai.aliyuncs.com/img/截屏2020-05-16 12.06.50.png?osx)    
-![](https://pic1awn.oss-cn-shanghai.aliyuncs.com/img/截屏2020-05-16 12.06.50.png?osx) 
+![](https://pic1awn.oss-cn-shanghai.aliyuncs.com/img/截屏2020-05-16 12.06.50.png?osx)     
   
 [主要参考refer](https://github.com/GeQ1an/MSI-B360M-MORTAR-HACKINTOSH-OPENCORE-EFI "refer")
 ### Main change：  
