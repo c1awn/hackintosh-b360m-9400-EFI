@@ -50,7 +50,3 @@
 - FaceTime / iMessage
 - 睿频 /原生电源管理
 - 睡眠 / 键盘、鼠标唤醒
-<<<<<<< HEAD
-
-=======
->>>>>>> fa9215b74b1f4f2a25afdccd556026c8b0a4ad18
