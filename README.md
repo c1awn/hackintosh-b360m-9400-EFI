@@ -38,7 +38,7 @@
 
 
 ### Main change：  
-- SMBIOS 必须自定义
+- SMBIOS的三码必须自定义，避免和别人重复导致appleid被锁
 - 改USBinjectall为usbport，删除cpufriend，不需要hwp变频
 - 修改oc boot menu参数
 - 测试Nvmefix.kext对温度的影响不明显，EFI还是加了
