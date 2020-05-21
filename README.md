@@ -50,3 +50,4 @@
 - FaceTime / iMessage
 - 睿频 /原生电源管理
 - 睡眠 / 键盘、鼠标唤醒
+![](https://raw.githubusercontent.com/c1awn/hackintosh-b360m-9400-EFI/master/Images/videoproc.png)
