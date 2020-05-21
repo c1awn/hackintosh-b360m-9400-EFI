@@ -49,6 +49,7 @@
 - 隔空投送 / 接力 / 随航
 - FaceTime / iMessage
 - 睿频 /原生电源管理
-- 睡眠 / 键盘、鼠标唤醒
+- 睡眠 / 键盘、鼠标唤醒  
+
 ![硬解](https://raw.githubusercontent.com/c1awn/hackintosh-b360m-9400-EFI/master/Images/videoproc.png)
 ![核显加速，最大到1.05](https://github.com/c1awn/hackintosh-b360m-9400-EFI/blob/master/Images/IGPU.png?raw=true)
