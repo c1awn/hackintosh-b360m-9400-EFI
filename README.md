@@ -44,7 +44,7 @@
 - 测试Nvmefix.kext对温度的影响不明显，EFI还是加了
 ### What's work
 - 声卡（板载）/ 网卡（板载）
-- 显卡 硬解 4K（HEVC + H.264） Videoproc硬解图和核显加速图见底部
+- 显卡 硬解 4K（HEVC + H.264） Videoproc硬解图和核显加速图见底部，核显最大跑到1.05
 - WiFi（PCI-E 设备） / 蓝牙（PEI-E 载 USB 设备）
 - 隔空投送 / 接力 / 随航
 - FaceTime / iMessage
