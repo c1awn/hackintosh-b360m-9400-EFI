@@ -44,10 +44,11 @@
 - 测试Nvmefix.kext对温度的影响不明显，EFI还是加了
 ### What's work
 - 声卡（板载）/ 网卡（板载）
-- 显卡 硬解 4K（HEVC + H.264） Videoproc显示UHD630硬解，而不是独显。通过观看4K视频、转码等发现主要是核显出力，CPU基本满载，独显很平淡。网上说核显作为主力对剪辑视频啥的速度有提升。
+- 显卡 硬解 4K（HEVC + H.264） Videoproc硬解图和核显加速图见底部
 - WiFi（PCI-E 设备） / 蓝牙（PEI-E 载 USB 设备）
 - 隔空投送 / 接力 / 随航
 - FaceTime / iMessage
 - 睿频 /原生电源管理
 - 睡眠 / 键盘、鼠标唤醒
-![](https://raw.githubusercontent.com/c1awn/hackintosh-b360m-9400-EFI/master/Images/videoproc.png)
+![硬解](https://raw.githubusercontent.com/c1awn/hackintosh-b360m-9400-EFI/master/Images/videoproc.png)
+![核显加速，最大到1.05](https://github.com/c1awn/hackintosh-b360m-9400-EFI/blob/master/Images/IGPU.png?raw=true)
