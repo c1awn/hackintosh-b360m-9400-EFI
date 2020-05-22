@@ -28,7 +28,13 @@
 | 显示器  | LG 4K Mac不上4K对不住眼睛 | 1500 咸鱼 |    
    
 [main refer](https://github.com/GeQ1an/MSI-B360M-MORTAR-HACKINTOSH-OPENCORE-EFI "refer")  
-### update  in 20200519，睡眠bug已解决
+
+
+### update  in 20200522  睡眠bug-handoff
+本来蓝牙直接接主板usb2.0后睡眠正常，但是偶然发现如果不小心唤醒了电脑，但是不登陆、放任不管或者在登录界面点击“取消”，那电脑不会重新睡眠，表现是屏幕黑但是主机风扇转、主板灯亮。  
+pmset -g看到`sleep prevented by sharingd`，由于设置里的共享没开，那就只有handoff了，关闭后问题解决。
+
+### update  in 20200519 睡眠bug-蓝牙内建
 - 问题阐述：usb定制后发现睡眠时机箱和CPU散热风扇依旧转、主板灯亮，且显卡会不定时狂转几秒后停止，此问题无论是否开启小憩都会存在，而有人反映要开启小憩才能睡眠。
 - 解决过程：1.`pmset -g assertions`和`log show --last 1h | grep -Ei "Wake Reason"`查看睡眠原因，pmset显示有蓝牙和parsec-fbf，后者显示`kernel: (AppleACPIPlatform) AppleACPIPlatformPower Wake reason: ?`，由于相信已经内建usb蓝牙，于是精力放在parsec-fbf和 Wake reason: ?上，未果。远偶然在远景看到一篇讲usb一分二导致不能睡眠的帖子，got it。
 - **原因：蓝牙接在usb一分二hub上，尽管一分二已经内建。而蓝牙接在主板usb接口，睡眠（手动/自动）马上正常。不过，不开小憩的话，多次睡眠唤醒循环后自动睡眠偶尔会失败（屏幕黑但是主机风扇转、主板灯亮），开启小憩后还没遇到自动睡眠失败。10.15开启小憩注意会有RTC唤醒，要开启禁止RTC唤醒补丁**      
