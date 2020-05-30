@@ -1,4 +1,4 @@
-# hackintosh-b360m-9400 自用EFI备份
+# hackintosh-b360m-9400 自用EFI备份/OC0.5.7/iMac19,1(核显+独显)
 ```
                                       mac
                                       ----------------------------------------------
@@ -29,7 +29,9 @@
    
 [main refer](https://github.com/GeQ1an/MSI-B360M-MORTAR-HACKINTOSH-OPENCORE-EFI "refer")  
 
-
+### update  in 20200530 
+- 10.15.4升级10.15.5失败，别的没发现，但是睡眠唤醒变成重启，更新所有的驱动未解决，干脆回退到10.14.6。
+- 发现10.14.6的睡眠很好，打开handoff也可以正常睡眠。
 ### update  in 20200522  睡眠bug-handoff
 本来蓝牙直接接主板usb2.0后睡眠正常，但是偶然发现如果不小心唤醒了电脑，但是不登陆、放任不管或者在登录界面点击“取消”，那电脑不会重新睡眠，表现是屏幕黑但是主机风扇转、主板灯亮。  
 pmset -g看到`sleep prevented by sharingd`，由于设置里的共享没开，那就只有handoff了，关闭后问题解决。
