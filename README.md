@@ -17,6 +17,21 @@
         ################              Graphics: Radeon RX 480 (8 GB), 3840 x 2160 (2160p/4K UHD 1 - Ultra High Definition)
          ####     #####               Display : 3840 x 2160 (2160p/4K UHD 1 - Ultra High Definition)
 ```
+### Summary：  
+- SMBIOS的三码必须自定义，避免和别人重复导致appleid被锁
+- 改USBinjectall为usbport，删除cpufriend，不需要hwp变频
+- 修改oc boot menu参数
+- 测试Nvmefix.kext对温度的影响不明显，EFI还是加了
+- 此EFI小版本升级应该不用更改，目前10.15.4升级10.15.5，之后升级10.15.5的安全更新，都正常。
+### What's work
+- 声卡（板载）/ 网卡（板载）
+- 显卡 硬解 4K（HEVC + H.264） Videoproc硬解图和核显加速图见底部，核显最大跑到1.05
+- WiFi（PCI-E 设备） / 蓝牙（PEI-E 载 USB 设备）
+- 隔空投送 / 接力 / 随航
+- FaceTime / iMessage
+- 睿频 /原生电源管理
+- 睡眠 / 键盘、鼠标唤醒  
+
 ### 配置（不含显示器，主要配件合计3410元，不算独显2810元，挺香）
 |   硬件 | 实例  | 价格 |
 | ------------ | ------------ |------------ |
@@ -47,21 +62,6 @@ pmset -g看到`sleep prevented by sharingd`，由于设置里的共享没开，�
 为什么用一分二usb？因为MSI B360M迫击炮只有一个9针usb2.0接口，而机箱面板有usb2.0，94360CD无线网卡的蓝牙也要接usb2.0。    
 >睡眠即醒很大程度上跟USB的定制相关，一般一个好的USB定制就能解决睡眠即醒的问题。当然系统的更新，MacOS的也在做不断的调整，比如蓝牙不能在HUB下进行内建，比如雷电卡必须将4个端口全部内建才行，等等。甚至有些时候我们都不知道为什么黑果会睡不着，那有没有一个办法让黑果强制睡眠呢？答案是有的。经过我的摸索，有几种方法能达到强制睡眠的效果，只是方法不同而已，但主要围绕的还是0d/6d的数值来做一些工作。       
 [睡眠扩展链接-3.10 睡眠即醒的相关问题](https://blog.xjn819.com/?p=543 "睡眠扩展链接-3.10 睡眠即醒的相关问题")  
-
-
-### Main change：  
-- SMBIOS的三码必须自定义，避免和别人重复导致appleid被锁
-- 改USBinjectall为usbport，删除cpufriend，不需要hwp变频
-- 修改oc boot menu参数
-- 测试Nvmefix.kext对温度的影响不明显，EFI还是加了
-### What's work
-- 声卡（板载）/ 网卡（板载）
-- 显卡 硬解 4K（HEVC + H.264） Videoproc硬解图和核显加速图见底部，核显最大跑到1.05
-- WiFi（PCI-E 设备） / 蓝牙（PEI-E 载 USB 设备）
-- 隔空投送 / 接力 / 随航
-- FaceTime / iMessage
-- 睿频 /原生电源管理
-- 睡眠 / 键盘、鼠标唤醒  
 
 ![硬解](https://raw.githubusercontent.com/c1awn/hackintosh-b360m-9400-EFI/master/Images/videoproc.png)
 ![核显加速，最大到1.05](https://github.com/c1awn/hackintosh-b360m-9400-EFI/blob/master/Images/IGPU.png?raw=true)
