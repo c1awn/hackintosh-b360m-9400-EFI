@@ -17,6 +17,7 @@
         ################              Graphics: Radeon RX 480 (8 GB), 3840 x 2160 (2160p/4K UHD 1 - Ultra High Definition)
          ####     #####               Display : 3840 x 2160 (2160p/4K UHD 1 - Ultra High Definition)
 ```
+[EFI From this link](https://github.com/GeQ1an/MSI-B360M-MORTAR-HACKINTOSH-OPENCORE-EFI "refer")  
 ### Summary：  
 - SMBIOS的三码必须自定义，避免和别人重复导致appleid被锁
 - 改USBinjectall为usbport，删除cpufriend，不需要hwp变频
@@ -42,7 +43,6 @@
 | 内存  | 枭鲸 16G x2 寨厂 貌似是玖和马甲 | 540 淘宝 |
 | 显示器  | LG 4K Mac不上4K对不住眼睛 | 1500 咸鱼 |    
    
-[main refer](https://github.com/GeQ1an/MSI-B360M-MORTAR-HACKINTOSH-OPENCORE-EFI "refer")  
 
 ### update  in 20200601
 - 10.15.5的睡眠唤醒重启+之前存在的handoff影响二次睡眠，此两个问题已解决：重置nvram，在win用easyuefi重新添加oc引导。升级10.15.5不需要更新oc和驱动。
