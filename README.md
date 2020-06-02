@@ -29,6 +29,10 @@
    
 [main refer](https://github.com/GeQ1an/MSI-B360M-MORTAR-HACKINTOSH-OPENCORE-EFI "refer")  
 
+### update  in 20200601
+- 10.15.5的睡眠唤醒重启+之前存在的handoff影响二次睡眠，此两个问题已解决：重置nvram，在win用easyuefi重新添加oc引导。
+- 怀疑原因：EFI文件不能随便替换，特别是clover和oc不能直接交叉替换。如果替换，需要重置nvram。同一份EFI，有的人总是所有问题，但是格盘重新安装后就正常，应该也是同样的问题。
+
 ### update  in 20200530 
 - 10.15.4升级10.15.5失败，别的没发现，但是睡眠唤醒变成重启，更新所有的驱动仍未解决，干脆回退到10.14.6。
 - ~~发现10.14.6的睡眠很好，打开handoff也可以正常睡眠。~~  10.14.6打开handoff还是可能出现和10.15一样的睡眠失败情况
