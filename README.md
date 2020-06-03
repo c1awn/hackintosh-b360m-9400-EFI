@@ -46,7 +46,8 @@
    
 
 ### update  in 20200601
-- 10.15.5的睡眠唤醒重启+之前存在的handoff影响二次睡眠，此两个问题已解决：重置nvram，在win用easyuefi重新添加oc引导。升级10.15.5不需要更新oc和驱动。
+- 10.15.5的睡眠唤醒重启+之前存在的handoff影响二次睡眠，此两个问题已解决：重置nvram，在win用easyuefi重新添加oc引导。奇怪的是pmset -g还是偶尔看到`sleep prevented by sharingd`。anyway，睡眠已完美。
+- 升级10.15.5不需要更新oc和驱动。
 - 怀疑原因：EFI文件不能随便替换，特别是clover和oc不能直接交叉替换。如果替换，需要重置nvram。同一份EFI，有的人总是有各种问题，但是格盘重新安装后就正常，应该也是同样的原因，已存nvram信息和引导不匹配。
 
 ### update  in 20200530（怀疑是nvram的锅） 
