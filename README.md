@@ -49,8 +49,9 @@
 - OC版本不同，config文件不一样，编辑时SMBIOS的三码勿忘修改
 - OC版本不同，编辑器版本也不一致，不要用低版本编辑器修改高版本plist，此问题不注意再怎么修改都无法成功启动OC
 - Kexts中的独有的驱动和相应的配置要更新
-- Windows和Mac共用一个磁盘的话，重置naram后，很有可能无法读取OC启动项。因为BIOS默认添加、识别Windows的boot启动项，手动删了重启电脑则又会添加，而一旦系统读取到Windows的启动项，就忽略OC的/Boot/BOOTx64.efi。
-- 网上看到Nvram有记忆功能：本次启动是哪个系统，下次默认还是它。尝试办法：粗暴删除Windows的启动文件，只留OC文件，这样OC启动项就出现了，进入Mac。再用PE修复Windows的引导，这时EFI被清空重置，只有Windows的文件，重新复制OC文件过来，重启，理论上进入的还是Mac，因为上一次启动的是OC。但是这个办法只成功了2次的样子，成功的Mac版本是10.15，新版11.0尝试多次都不行，可能和系统版本有关。
+- Windows和Mac共用一个EFI（磁盘）的话，重置naram后，很有可能无法读取OC启动项。因为BIOS默认添加、识别Windows的boot启动项，手动删了重启电脑则又会添加，而一旦系统读取到Windows的启动项，就忽略OC的/Boot/BOOTx64.efi。
+- 网上看到Nvram有记忆功能：本次启动是哪个系统，下次默认还是它。尝试办法：粗暴删除Windows的启动文件，只留OC文件，这样OC启动项就出现了，进入Mac。再用PE修复Windows的引导，注意，修复时把window引导写入另一块盘的EFI分区，这个盘可以是硬盘或者优盘，不要和Mac所在盘相同。重启电脑会发现NVRAM自动添加了Windows引导，而且排第一位，下面则是OC引导的几个启动项。
+- B360优盘启动快捷键是F11
 
 ### update  in 20200601
 - 10.15.5的睡眠唤醒重启+之前存在的handoff影响二次睡眠，此两个问题已解决：重置nvram，在win用easyuefi重新添加oc引导。奇怪的是pmset -g还是偶尔看到`sleep prevented by sharingd`。anyway，睡眠已完美。
