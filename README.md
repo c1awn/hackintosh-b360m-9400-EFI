@@ -85,5 +85,3 @@ pmset -g看到`sleep prevented by sharingd`，由于设置里的共享没开，�
 
 ![硬解](https://raw.githubusercontent.com/c1awn/hackintosh-b360m-9400-EFI/master/Images/videoproc.png)
 ![核显加速，最大到1.05](https://github.com/c1awn/hackintosh-b360m-9400-EFI/blob/master/Images/IGPU.png?raw=true)
-
-
