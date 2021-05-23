@@ -1,23 +1,5 @@
 # hackintosh-b360m-9400 自用EFI备份/OC0.5.7/iMac19,1(核显+独显)
 ![OS](https://pic1awn.oss-cn-shanghai.aliyuncs.com/img/20210523134022.png?osx)
-```
-                                      mac
-                                      ----------------------------------------------
-                                      Model   : Hackintosh (SMBIOS: iMac19,1)
-                 ###                  OS      : macOS Catalina 10.15.4 19E287
-               ####                   Kernel  : Darwin 19.4.0
-               ###                    Uptime  : 2 hours, 58 minutes
-       #######    #######             Shell   : /bin/bash
-     ######################           Time    : 
-    #####################             CPU     : Intel Core i5-9400 2.90GHz x (6)
-    ####################              Memory  : 2709MB(Avai) / 32768MB(Total)
-    ####################              Disk    : 200GB(Avai) / 233GB(Total)
-    #####################             IP Addr : Public /Intranet 192.168.2.143
-     ######################           LCD     : LG
-      ####################            Terminal: xterm-256color by Apple Terminal
-        ################              Graphics: Radeon RX 480 (8 GB), 3840 x 2160 (2160p/4K UHD 1 - Ultra High Definition)
-         ####     #####               Display : 3840 x 2160 (2160p/4K UHD 1 - Ultra High Definition)
-```
 [EFI From this link](https://github.com/GeQ1an/MSI-B360M-MORTAR-HACKINTOSH-OPENCORE-EFI "refer")  
 ### Summary：  
 - SMBIOS的三码必须自定义，避免和别人重复导致appleid被锁
