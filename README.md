@@ -32,6 +32,7 @@
 - FaceTime / iMessage
 - 睿频 /原生电源管理
 - 睡眠 / 键盘、鼠标唤醒  
+- 感谢作者，EFI完美程度近99.999%
 
 ### 配置（不含显示器，主要配件合计3410元，不算独显2810元，挺香）
 |   硬件 | 实例  | 价格 |
@@ -42,10 +43,45 @@
 | 固态  | 西数SN550 1T    | 770 咸鱼|
 | 内存  | 枭鲸 16G x2 寨厂 貌似是玖和马甲 | 540 淘宝 |
 | 显示器  | LG 4K Mac不上4K对不住眼睛 | 1500 咸鱼 |    
-   
+
+### update  in 2021053
+- 关闭SIP，由于系统大版本不一样，键值不一样，现在大版本为11
+```
+在OpenCore中关闭SIP
+NVRAM
+增加或者修改
+7C436110-AB2A-4BBB-A880-FE41995C9F82
+csr-active-config 类型<Data>值： 67000000
+改完成重启电脑=》重置NVRAM
+```
+- 检查sip状态
+```
+sudo csrutil status
+System Integrity Protection status: unknown (Custom Configuration).
+
+Configuration:
+	Apple Internal: disabled //关键状态
+	Kext Signing: disabled
+	Filesystem Protections: disabled
+	Debugging Restrictions: disabled
+	DTrace Restrictions: disabled
+	NVRAM Protections: disabled
+	BaseSystem Verification: enabled
+
+```
+### update  in 20201118
+*更新OC为0.6.3，10.15升级到11.0.1  更新OC注意事项*
+- OC版本不同，config文件不一样，编辑时SMBIOS的三码勿忘修改
+- OC版本不同，编辑器版本也不一致，不要用低版本编辑器修改高版本plist，此问题不注意再怎么修改都无法成功启动OC
+- Kexts中的独有的驱动和相应的配置要更新
+- Windows和Mac共用一个EFI（磁盘）的话，重置naram后，很有可能无法读取OC启动项。因为BIOS默认添加、识别Windows的boot启动项，手动删了重启电脑则又会添加，而一旦系统读取到Windows的启动项，就忽略OC的/Boot/BOOTx64.efi。
+- 网上看到Nvram有记忆功能：本次启动是哪个系统，下次默认还是它。尝试办法：粗暴删除Windows的启动文件，只留OC文件，这样OC启动项就出现了，进入Mac。再用PE修复Windows的引导，注意，修复时把window引导写入另一块盘的EFI分区，这个盘可以是硬盘或者优盘，不要和Mac所在盘相同。重启电脑会发现OC也自动添加了Windows引导，而且排第一位，下面则是Mac几个启动项。
+- 由于有两块盘的EFI，故Windows总是默认启动自己的问题可以在BIOS修改硬盘启动顺序来解决，即把oc放到第一
+- B360优盘启动快捷键是F11
 
 ### update  in 20200601
-- 10.15.5的睡眠唤醒重启+之前存在的handoff影响二次睡眠，此两个问题已解决：重置nvram，在win用easyuefi重新添加oc引导。升级10.15.5不需要更新oc和驱动。
+- 10.15.5的睡眠唤醒重启+之前存在的handoff影响二次睡眠，此两个问题已解决：重置nvram，在win用easyuefi重新添加oc引导。奇怪的是pmset -g还是偶尔看到`sleep prevented by sharingd`。anyway，睡眠已完美。
+- 升级10.15.5不需要更新oc和驱动。
 - 怀疑原因：EFI文件不能随便替换，特别是clover和oc不能直接交叉替换。如果替换，需要重置nvram。同一份EFI，有的人总是有各种问题，但是格盘重新安装后就正常，应该也是同样的原因，已存nvram信息和引导不匹配。
 
 ### update  in 20200530（怀疑是nvram的锅） 
