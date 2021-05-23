@@ -43,7 +43,32 @@
 | 固态  | 西数SN550 1T    | 770 咸鱼|
 | 内存  | 枭鲸 16G x2 寨厂 貌似是玖和马甲 | 540 淘宝 |
 | 显示器  | LG 4K Mac不上4K对不住眼睛 | 1500 咸鱼 |    
-   
+
+### update  in 2021053
+- 关闭SIP，由于系统大版本不一样，键值不一样，现在大版本为11
+```
+在OpenCore中关闭SIP
+NVRAM
+增加或者修改
+7C436110-AB2A-4BBB-A880-FE41995C9F82
+csr-active-config 类型<Data>值： 67000000
+改完成重启电脑=》重置NVRAM
+```
+- 检查sip状态
+```
+sudo csrutil status
+System Integrity Protection status: unknown (Custom Configuration).
+
+Configuration:
+	Apple Internal: disabled //关键状态
+	Kext Signing: disabled
+	Filesystem Protections: disabled
+	Debugging Restrictions: disabled
+	DTrace Restrictions: disabled
+	NVRAM Protections: disabled
+	BaseSystem Verification: enabled
+
+```
 ### update  in 20201118
 *更新OC为0.6.3，10.15升级到11.0.1  更新OC注意事项*
 - OC版本不同，config文件不一样，编辑时SMBIOS的三码勿忘修改
