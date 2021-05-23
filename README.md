@@ -1,4 +1,5 @@
 # hackintosh-b360m-9400 自用EFI备份/OC0.5.7/iMac19,1(核显+独显)
+![OS](https://pic1awn.oss-cn-shanghai.aliyuncs.com/img/20210523134022.png?osx)
 ```
                                       mac
                                       ----------------------------------------------
