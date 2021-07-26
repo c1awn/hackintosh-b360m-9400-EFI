@@ -1,5 +1,5 @@
 # hackintosh-b360m-9400 自用EFI备份/OC0.5.7/iMac19,1(核显+独显)
-![OS](![image](![](https://pic1awn.oss-cn-shanghai.aliyuncs.com/img/20210726141618.png?osx)))
+![OS](https://pic1awn.oss-cn-shanghai.aliyuncs.com/img/20210726141618.png?osx)  
 [EFI From this link](https://github.com/GeQ1an/MSI-B360M-MORTAR-HACKINTOSH-OPENCORE-EFI "refer")  
 ### Summary：  
 - SMBIOS的三码必须自定义，避免和别人重复导致appleid被锁
