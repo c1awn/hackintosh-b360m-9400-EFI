@@ -1,5 +1,5 @@
-# hackintosh-b360m-9400 自用EFI备份/OC/iMac19,1(核显+独显)
-![OS](https://pic1awn.oss-cn-shanghai.aliyuncs.com/img/20210726141618.png?osx)  
+# hackintosh-b360m-9400 自用EFI备份/OC/iMac19,1(核显+独显) 
+![OS](https://pic1awn.oss-cn-shanghai.aliyuncs.com/img/20210523134022.png)  
 [EFI From this link](https://github.com/GeQ1an/MSI-B360M-MORTAR-HACKINTOSH-OPENCORE-EFI "refer")  
 ### Summary：  
 - SMBIOS的三码必须自定义，避免和别人重复导致appleid被锁
@@ -83,5 +83,5 @@ pmset -g看到`sleep prevented by sharingd`，由于设置里的共享没开，�
 >睡眠即醒很大程度上跟USB的定制相关，一般一个好的USB定制就能解决睡眠即醒的问题。当然系统的更新，MacOS的也在做不断的调整，比如蓝牙不能在HUB下进行内建，比如雷电卡必须将4个端口全部内建才行，等等。甚至有些时候我们都不知道为什么黑果会睡不着，那有没有一个办法让黑果强制睡眠呢？答案是有的。经过我的摸索，有几种方法能达到强制睡眠的效果，只是方法不同而已，但主要围绕的还是0d/6d的数值来做一些工作。       
 [睡眠扩展链接-3.10 睡眠即醒的相关问题](https://blog.xjn819.com/?p=543 "睡眠扩展链接-3.10 睡眠即醒的相关问题")  
 
-![硬解](https://raw.githubusercontent.com/c1awn/hackintosh-b360m-9400-EFI/master/Images/videoproc.png)
-![核显加速，最大到1.05](https://github.com/c1awn/hackintosh-b360m-9400-EFI/blob/master/Images/IGPU.png?raw=true)
+![硬解](https://pic1awn.oss-cn-shanghai.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2020-05-15%2017.43.33.png)  
+![核显加速，最大到1.05](https://github.com/c1awn/hackintosh-b360m-9400-EFI/blob/master/Images/IGPU.png?raw=true)  
