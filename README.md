@@ -52,6 +52,13 @@ Configuration:
 	BaseSystem Verification: enabled
 
 ```
+### update  in 20211120
+最近发现无法睡眠，第一反应是USB定制失效，重新定制，还是无效。结果pmset -g显示
+```
+sleep prevented by sharingd, configd, coreaudiod
+```
+🔍发现sharingd的确是会影响睡眠，想起近期开启过设置/共享里的网络分享开关，关闭后立即恢复睡眠。
+
 ### update  in 20201118
 *更新OC为0.6.3，10.15升级到11.0.1  更新OC注意事项*
 - OC版本不同，config文件不一样，编辑时SMBIOS的三码勿忘修改
