@@ -27,6 +27,13 @@
 | 内存  | 枭鲸 16G x2 寨厂 貌似是玖和马甲 | 540 淘宝 |
 | 显示器  | LG 4K Mac不上4K对不住眼睛 | 1500 咸鱼 |    
 
+### update  in 20211120
+最近发现无法睡眠，第一反应是USB定制失效，重新定制，还是无效。结果pmset -g显示
+```
+sleep prevented by sharingd, configd, coreaudiod
+```
+🔍发现sharingd的确是会影响睡眠，想起近期开启过设置/共享里的网络分享开关，关闭后立即恢复睡眠。
+
 ### update  in 2021053
 - 关闭SIP，由于系统大版本不一样，键值不一样，现在大版本为11
 ```
@@ -52,12 +59,7 @@ Configuration:
 	BaseSystem Verification: enabled
 
 ```
-### update  in 20211120
-最近发现无法睡眠，第一反应是USB定制失效，重新定制，还是无效。结果pmset -g显示
-```
-sleep prevented by sharingd, configd, coreaudiod
-```
-🔍发现sharingd的确是会影响睡眠，想起近期开启过设置/共享里的网络分享开关，关闭后立即恢复睡眠。
+
 
 ### update  in 20201118
 *更新OC为0.6.3，10.15升级到11.0.1  更新OC注意事项*
