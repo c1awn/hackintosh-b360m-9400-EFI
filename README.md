@@ -33,6 +33,8 @@
 sleep prevented by sharingd, configd, coreaudiod
 ```
 🔍发现sharingd的确是会影响睡眠，想起近期开启过设置/共享里的网络分享开关，关闭后立即恢复睡眠。
+>另，历史记录发现有sharingd，但是未开启共享、开启了handoff。  
+>handoff自从某个版本--10.14.6开始一直是开启的，就是说handoff导致的sleep prevented by sharingd 应该是系统bug，不知道哪个版本开始修复了。
 
 ### update  in 2021053
 - 关闭SIP，由于系统大版本不一样，键值不一样，现在大版本为11
