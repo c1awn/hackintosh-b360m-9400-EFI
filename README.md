@@ -4,9 +4,8 @@
 ### Summary：  
 - SMBIOS的三码必须自定义，避免和别人重复导致appleid被锁
 - 改USBinjectall为usbport，删除cpufriend，不需要hwp变频
-- 修改oc boot menu参数
-- 测试Nvmefix.kext对温度的影响不明显，EFI还是加了
-- 此EFI小版本升级应该不用更新oc和驱动，目前10.15.4升级10.15.5，之后升级10.15.5的安全更新，都正常。
+- 修改oc boot menu参数  
+- 此EFI小版本升级理论上不用更新oc和驱动，比如10.15.4升级10.15.5，之后升级10.15.5的安全更新，都正常。
 ### What's work
 - 声卡（板载）/ 网卡（板载）
 - 显卡 硬解 4K（HEVC + H.264） Videoproc硬解图和核显加速图见底部，核显最大跑到1.05
@@ -28,7 +27,7 @@
 | 显示器  | LG 4K Mac不上4K对不住眼睛 | 1500 咸鱼 |    
 
 ### update  in 20211120
-最近发现无法睡眠，第一反应是USB定制失效，重新定制，还是无效。结果pmset -g显示
+最近发现无法睡眠，但是稳定后没升级过系统或者修改OC。第一反应是USB定制失效，重新定制，还是无效。结果pmset -g显示
 ```
 sleep prevented by sharingd, configd, coreaudiod
 ```
