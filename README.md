@@ -69,7 +69,7 @@ Configuration:
 - Kexts中的独有的驱动和相应的配置要更新
 - Windows和Mac共用一个EFI（磁盘）的话，重置naram后，很有可能无法读取OC启动项。因为BIOS默认添加、识别Windows的boot启动项，手动删了重启电脑则又会添加，而一旦系统读取到Windows的启动项，就忽略OC的/Boot/BOOTx64.efi。网上看到Nvram有记忆功能：本次启动是哪个系统，下次默认还是它。
 - 尝试办法：粗暴删除Windows的启动文件，只留OC文件，这样OC启动项就出现了，进入Mac。再用PE修复Windows的引导，**注意，修复时把window引导写入另一块盘的EFI分区，即Windows的EFI和Mac OC在不同的盘，这个盘可以是硬盘或者优盘**。重启电脑会发现OC也自动添加了Windows引导，而且排第一位，下面则是Mac几个启动项。
-- 如果需要OC启动Windows，在Boot 中勾选 DiscardHibernateMap，避免Windows休眠唤醒读取内存出错。
+- 如果需要OC启动Windows，在Boot 中勾选 DiscardHibernateMap，避免Windows休眠唤醒读取内存出错。或者，可以关闭Windows的休眠，只用睡眠，那DiscardHibernateMap不用勾选。
 - 由于有两块盘的EFI，故Windows总是默认启动自己的问题可以在BIOS修改硬盘启动顺序来解决，即把oc放到第一
 - B360优盘启动快捷键是F11
 
